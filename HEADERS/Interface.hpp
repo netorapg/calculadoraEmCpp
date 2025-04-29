@@ -1,5 +1,5 @@
-#ifndef INTERFACE_CLI_HPP
-#define INTERFACE_CLI_HPP
+#ifndef INTERFACE_HPP
+#define INTERFACE_HPP
 
 #include "CalculadoraCientifica.hpp"
 

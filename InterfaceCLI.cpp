@@ -1,22 +1,21 @@
-class InterfaceCLI {
-private:
-    CalculadoraCientifica calc;
+#include "HEADERS/Interface.hpp"
+#include <iostream>
 
-    void exibirMenu(){
+void InterfaceCLI::exibirMenu(){
         std::cout << "\n=== Calculadora CLI ===" << std::endl;
-        std::cout << "1. Somar\n2. Subtrair\n3. Dividir\n";
+        std::cout << "1. Somar\n2. Subtrair\n3. Multiplicar\n4, Dividir\n";
         std::cout << "5. Potência\n6. Raiz Quadrada\n0. Sair\n";
         std::cout << "Escolha uma opção: ";
     }
 
-    void executarOperacao(int opcao){
+void InterfaceCLI::executarOperacao(int opcao){
         double a, b;
         try {
             switch(opcao) {
                 case 1:
                     std::cout << "Digite dois números: ";
                     std::cin >> a >> b;
-                    std::cout << "Resultado: " << calcular.somar(a, b) << std::endl;
+                    std::cout << "Resultado: " << calc.somar(a, b) << std::endl;
                     break;
                 case 2:
                     std::cout << "Digite dois números: ";
@@ -49,10 +48,9 @@ private:
         } catch (const std::exception& e) {
             std::cerr << e.what() << std::endl;
         }
-    }
+}
 
-public:
-    void iniciar() {
+void InterfaceCLI::iniciar() {
         int opcao;
         do {
             exibirMenu();
@@ -60,6 +58,5 @@ public:
             if(opcao != 0) {
                 executarOperacao(opcao);
             }
-        } while (opcao != 0)
-    }
-};
+    } while (opcao != 0);
+}
