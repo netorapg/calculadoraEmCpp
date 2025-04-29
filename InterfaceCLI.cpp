@@ -3,7 +3,7 @@
 
 void InterfaceCLI::exibirMenu(){
         std::cout << "\n=== Calculadora CLI ===" << std::endl;
-        std::cout << "1. Somar\n2. Subtrair\n3. Multiplicar\n4, Dividir\n";
+        std::cout << "1. Somar\n2. Subtrair\n3. Multiplicar\n4. Dividir\n";
         std::cout << "5. Potência\n6. Raiz Quadrada\n0. Sair\n";
         std::cout << "Escolha uma opção: ";
     }
