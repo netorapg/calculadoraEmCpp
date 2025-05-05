@@ -44,7 +44,30 @@ void InterfaceCLI::executarOperacao(int opcao){
                     std::cin >> a;
                     std::cout << "Resultado: " << calc.raizQuadrada(a) << std::endl;
                     break;
-                case 7:
+                    case 7:
+                    std::cout << "Digite o principal, taxa (decimal) e períodos: ";
+                    int periodos; // Adicionar declaração
+                    std::cin >> a >> b >> periodos;
+                    std::cout << "Valor Futuro: " << calc.calcularValorFuturo(a, b, periodos) << std::endl;
+                    break;
+                    
+                case 8:
+                    std::cout << "Digite o valor futuro, taxa (decimal) e períodos: ";
+                    std::cin >> a >> b >> periodos;
+                    std::cout << "Valor Presente: " << calc.calcularValorPresente(a, b, periodos) << std::endl;
+                    break;
+                    
+                case 9:
+                    std::cout << "Digite o principal, taxa anual (decimal) e número de pagamentos: ";
+                    std::cin >> a >> b >> periodos;
+                    std::cout << "Pagamento Periódico: " << calc.calcularPagamentoPeriodico(a, b, periodos) << std::endl;
+                    break;
+                    
+                case 10:
+                    std::cout << "Digite investimento inicial, retorno total e períodos: ";
+                    std::cin >> a >> b >> periodos;
+                    std::cout << "Taxa de Retorno: " << calc.calcularTaxaRetorno(a, b, periodos)*100 << "%" << std::endl; // Corrigido o nome do método
+                    break;
                 default:
                         std::cout << "Opção inválida!" << std::endl;
             }

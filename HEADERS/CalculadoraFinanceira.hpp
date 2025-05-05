@@ -13,7 +13,7 @@ public:
     double calcularValorPresente(double valorFuturo, double taxa, int periodos);
 
     // Pagamentos periódicos (PMT)
-    double calcularPagamentosPeriodico(double double principal, double taxaAnual, int periodos);
+    double calcularPagamentoPeriodico(double principal, double taxaAnual, int periodos);
 
     // Taxa interna de retorno (retorno simples)
     double calcularTaxaRetorno(double investimentoInicial, double retornoTotal, int periodos);
