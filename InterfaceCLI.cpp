@@ -4,7 +4,9 @@
 void InterfaceCLI::exibirMenu(){
         std::cout << "\n=== Calculadora CLI ===" << std::endl;
         std::cout << "1. Somar\n2. Subtrair\n3. Multiplicar\n4. Dividir\n";
-        std::cout << "5. Potência\n6. Raiz Quadrada\n0. Sair\n";
+        std::cout << "5. Potência\n6. Raiz Quadrada\n";
+        std::cout << "7. Valor Futuro (juros Compostos)\n8. Valor Presente\n";
+        std::cout << "9. Pagamentos Periódico (PMT)\n10. Taxa de Retorno\n0. Sair\n";
         std::cout << "Escolha uma opção: ";
     }
 
@@ -42,6 +44,7 @@ void InterfaceCLI::executarOperacao(int opcao){
                     std::cin >> a;
                     std::cout << "Resultado: " << calc.raizQuadrada(a) << std::endl;
                     break;
+                case 7:
                 default:
                         std::cout << "Opção inválida!" << std::endl;
             }

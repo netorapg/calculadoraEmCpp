@@ -1,11 +1,11 @@
 #ifndef INTERFACE_HPP
 #define INTERFACE_HPP
 
-#include "CalculadoraCientifica.hpp"
+#include "CalculadoraFinanceira.hpp"
 
 class InterfaceCLI {
 private:
-    CalculadoraCientifica calc;
+    CalculadoraFinanceira calc;
     void exibirMenu();
     void executarOperacao(int opcao);
 
